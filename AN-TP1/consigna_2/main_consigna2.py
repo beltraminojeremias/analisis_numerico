@@ -14,8 +14,8 @@ def main():
     sirena_1="AN-TP1/audios/sirena_1.wav"
     
     # Aplicar FFT y graficar
-    inf = 0
-    sup = 3500
+    inf = 900
+    sup = 1100
     fft(sirena_1, ventana=0, xinf=inf, xsup=sup, yinf=0, ysup=None)
     fft(sirena_1, ventana=0.5, xinf=inf, xsup=sup, yinf=0, ysup=None)
 
