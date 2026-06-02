@@ -1,0 +1,16 @@
+from common_tp3 import *
+
+print("PASO 3 - Transformacion log-polar de las magnitudes")
+f1 = leer_gris(F1_PATH)
+f5 = leer_gris(F5_PATH)
+_, _, _, _, M1log = preparar_fft(f1)
+_, _, _, _, M5log = preparar_fft(f5)
+LP1, centro, radio_maximo, nang, nrad = a_logpolar(M1log)
+LP5, _, _, _, _ = a_logpolar(M5log)
+print(f"Centro usado: {centro}")
+print(f"Radio maximo: {radio_maximo}")
+print(f"Muestras angulares: {nang}")
+print(f"Muestras radiales: {nrad}")
+print("En el mapa log-polar, eje vertical = angulo, eje horizontal = log-radio.")
+print("La clave: log(a*r) = log(a) + log(r), por eso una escala se vuelve desplazamiento.")
+guardar_par(LP1, LP5, "Log-polar de |FFT2(f1)|", "Log-polar de |FFT2(f5)|", "05_mapas_logpolares.png", aspect="auto", axis_off=False)
