@@ -7,7 +7,7 @@ from pathlib import Path
 # Raíz proyecto (dos niveles arriba de consigna_1/)
 BASE_DIR = Path(__file__).parent.parent  # /tp-procesamiento-senales/
 AUDIOS_DIR = BASE_DIR / 'audios'
-IMG_DIR = BASE_DIR / 'imagenes' / 'consigna_1'
+IMG_DIR = BASE_DIR / 'imagenes' / 'consigna_4'
 
 # Verificar existencia
 if not AUDIOS_DIR.exists():
